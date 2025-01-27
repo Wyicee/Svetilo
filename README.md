@@ -3,4 +3,4 @@ INSTALL PROJECT
 2. npm run dev
 
 ROUTING
-1. catalog works only
+catalog works only
