@@ -62,7 +62,7 @@ import VButton from "@/global_components/VButton.vue";
 .about {
     .about__inner-heading {
       text-align: center;
-      margin-top: 20vh;
+      margin-top: 17vh;
       margin-bottom: 15vh;
     }
 
@@ -144,7 +144,7 @@ import VButton from "@/global_components/VButton.vue";
             flex-direction: column;
             align-items: flex-start;
             padding: 5rem;
-            min-height: 185px;
+            min-height: 18.5rem;
 
             &:nth-child(1) {
               border-bottom: 1px solid black;
@@ -163,10 +163,87 @@ import VButton from "@/global_components/VButton.vue";
   }
 }
 
-@media (max-width: $l-Laptop) {
+@media (max-width: 1380px) {
   .about {
     .about__inner {
-      padding: 0;
+      .stats {
+        .stats__items {
+          padding-top: 3rem;
+          .stats__items-col {
+            .stats__items-combined {
+              padding: 2rem;
+              min-height: 12.5rem;
+
+              .stats__items-title {
+                font-size: $font-size-large;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $s-Laptop) {
+  .about {
+    .about__inner {
+      grid-template-columns: 1fr;
+      .features {
+        .features__inner {
+          display: none;
+        }
+      }
+      .stats {
+        .stats__items {
+          .stats__items-col {
+            .stats__items-combined {
+              padding: 5rem;
+              min-height: 18.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .about {
+    .about__inner {
+      .stats {
+        .stats__items {
+          .stats__items-col {
+            .stats__items-combined {
+              padding: 2rem;
+              min-height: 12.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .about {
+    .about__inner {
+      .stats {
+        .stats__items {
+          .stats__items-col {
+            .stats__items-combined {
+              min-height: 10.5rem;
+
+              .stats__items-title {
+                font-size: $font-size-medium;
+              }
+              .stats__items-subtitle {
+                font-size: $font-size-small;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

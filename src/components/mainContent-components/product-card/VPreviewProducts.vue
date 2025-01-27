@@ -1,6 +1,5 @@
 <script setup>
 import VProductCards from "@/components/mainContent-components/product-card/VProductCards.vue";
-
 import { useProductStore } from "@/stores/productStore";
 
 const productStore = useProductStore();
@@ -68,9 +67,7 @@ const displayedProducts = productStore.productListWithDiscount.slice(0, products
 
 @media (max-width: 1620px) {
   .preview-products {
-
     .preview-products__inner {
-
       .preview-products__cards-container {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 20px;

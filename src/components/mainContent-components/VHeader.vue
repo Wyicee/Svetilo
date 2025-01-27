@@ -1,5 +1,14 @@
 <script setup>
 import VIcon from "@/components/icons/VIcon.vue";
+import VAsideModalWrapper from "@/components/mainContent-components/VAsideModalWrapper.vue";
+
+import { ref } from "vue";
+
+const modalRef = ref(null);
+
+const openModal = () => {
+  modalRef.value.openModal();
+};
 </script>
 
 <template>
@@ -9,6 +18,11 @@ import VIcon from "@/components/icons/VIcon.vue";
         <router-link to="/" class="header__logo logo">
           <VIcon id="logoSecondary" />
         </router-link>
+        <button class="burger-menu" @click="openModal">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <ul class="header__menu-list">
           <li class="header__menu-item">
             <router-link to="/" class="header__menu-link">Главная</router-link>
@@ -29,6 +43,7 @@ import VIcon from "@/components/icons/VIcon.vue";
       </nav>
     </div>
   </header>
+  <VAsideModalWrapper ref="modalRef" />
 </template>
 
 <style scoped lang="scss">
@@ -43,6 +58,26 @@ import VIcon from "@/components/icons/VIcon.vue";
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      position: relative;
+
+      .burger-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        border: none;
+        background: none;
+
+        span {
+          display: block;
+          width: 100%;
+          height: 3px;
+          background-color: white;
+          transition: all 0.3s ease;
+        }
+      }
     }
 
     .header__menu-list {
@@ -68,6 +103,57 @@ import VIcon from "@/components/icons/VIcon.vue";
           &:hover {
             color: $additional-color;
             transition: color .25s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .header {
+    .header__inner {
+      .header__menu {
+        padding: 1rem 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .header {
+    .header__inner {
+      .header__menu {
+        padding: 1rem 2rem;
+        justify-content: space-between;
+
+        .burger-menu {
+          display: flex;
+        }
+
+        .header__menu-list {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background-color: $primary-color;
+          width: 100%;
+          padding: 1rem;
+          text-align: center;
+          overflow: hidden;
+          z-index: +100;
+
+          &.menu-open {
+            display: flex;
+          }
+
+          .header__menu-item {
+            margin: 1rem 0;
+
+            .header__menu-link {
+              color: white;
+            }
           }
         }
       }

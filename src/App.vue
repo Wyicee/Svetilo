@@ -38,4 +38,14 @@ html { font-size: 10px }
     margin: 0 2.5rem 0 2.5rem;
   }
 }
+
+@media (max-width: $tablet) {
+  .heading {
+    font-size: 4rem;
+  }
+
+  .content {
+    margin: 0 1rem 0 1rem;
+  }
+}
 </style>

@@ -18,25 +18,26 @@ const sliderHomeList = [
     :modules="[Navigation, Pagination, Autoplay]"
     navigation
     pagination
-    autoplay="{autoplay: 10000}"
+    autoplay
     loop
     class="sliderWrap"
   >
     <swiper-slide
-      class="swiperSlide__wrapper"
       v-for="listItem in sliderHomeList"
       key="listItem.id"
     >
-      <div class="swiper-slide__info">
-        <div class="swiper-slide__info-name fade-in">
-          {{ listItem.name }}
+      <div class="swiperSlide__wrapper">
+        <div class="swiper-slide__info">
+          <div class="swiper-slide__info-name fade-in">
+            {{ listItem.name }}
+          </div>
+          <div class="swiper-slide__info-text fade-in">
+            {{ listItem.text }}
+          </div>
         </div>
-        <div class="swiper-slide__info-text fade-in">
-          {{ listItem.text }}
+        <div class="swiper-slide__photo">
+          <img :src="listItem.img" alt="sliderPhoto" class="swiper-slide__photo-img">
         </div>
-      </div>
-      <div class="swiper-slide__photo">
-        <img :src="listItem.img" alt="sliderPhoto" class="swiper-slide__photo-img">
       </div>
     </swiper-slide>
   </swiper>
@@ -106,14 +107,103 @@ const sliderHomeList = [
   }
 }
 
-@media (max-width: 975px) {
-  .swiperSlide__wrapper {
-    .swiper-slide__photo {
+@media (max-width: 990px) {
+  .sliderWrap {
+    .swiperSlide__wrapper {
+      .swiper-slide__info {
+        padding: 0 0 0 6rem;
+        margin-top: 1rem;
 
-      .swiper-slide__photo-img {
-        align-self: end;
-        width: 350px;
-        border-radius: 4rem;
+        .swiper-slide__info-name {
+          line-height: 90%;
+        }
+
+        .swiper-slide__info-text {
+          margin-top: 2rem;
+          font-size: $font-size-small;
+        }
+      }
+      .swiper-slide__photo {
+        .swiper-slide__photo-img {
+          width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 885px) {
+  .sliderWrap {
+    .swiperSlide__wrapper {
+      .swiper-slide__info {
+        padding: 0 0 0 6rem;
+        margin-top: 1rem;
+
+        .swiper-slide__info-name {
+          font-size: 4rem;
+          line-height: 90%;
+        }
+      }
+      .swiper-slide__photo {
+        .swiper-slide__photo-img {
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 835px) {
+  .sliderWrap {
+    min-height: 26rem;
+    .swiperSlide__wrapper {
+      .swiper-slide__info {
+        padding: 0 0 0 6rem;
+        margin-top: 1rem;
+
+        .swiper-slide__info-name {
+          font-size: 4rem;
+          line-height: 90%;
+        }
+
+        .swiper-slide__info-text {
+          margin-top: 2rem;
+          font-size: $font-size-small;
+        }
+      }
+      .swiper-slide__photo {
+
+        .swiper-slide__photo-img {
+          width: 220px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .sliderWrap {
+    min-height: 27rem;
+    .swiperSlide__wrapper {
+      .swiper-slide__info {
+        padding: 0 0 0 6rem;
+        margin-top: 1rem;
+
+        .swiper-slide__info-name {
+          font-size: $font-size-medium;
+          line-height: 90%;
+        }
+
+        .swiper-slide__info-text {
+          display: none;
+        }
+      }
+      .swiper-slide__photo {
+        position: absolute;
+        margin: 7rem 0 0 6rem;
+        .swiper-slide__photo-img {
+          width: 150px;
+        }
       }
     }
   }

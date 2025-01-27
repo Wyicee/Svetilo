@@ -95,4 +95,11 @@ const props = defineProps({
     transition: .25s;
   }
 }
+
+@media (max-width: $tablet) {
+  .primary {
+    width: 30rem;
+    height: 8rem;
+  }
+}
 </style>

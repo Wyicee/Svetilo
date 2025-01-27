@@ -44,8 +44,8 @@ defineProps({
 
 <style scoped lang="scss">
 .product__card {
-  max-width: 500px;
-  min-height: 650px;
+  max-width: 50rem;
+  min-height: 65rem;
   height: 100%;
   border: 2px solid #d9d9d9;
   border-radius: 40px;
@@ -56,16 +56,16 @@ defineProps({
   .product__discount {
     position: absolute;
     background-color: #ffffff;
-    padding: 10px 8px;
+    padding: 1rem .8rem;
     border-radius: 50px;
-    margin: 35px 0 0 50px;
+    margin: 3.5rem 0 0 5rem;
     font-weight: $font-bold;
     font-size: $font-size-small;
     pointer-events: none;
   }
 
   .product__photo {
-    width: 480px;
+    max-width: 48rem;
     justify-self: center;
     pointer-events: none;
 
@@ -78,8 +78,8 @@ defineProps({
   }
 
   .product__text-container {
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 2rem;
+    margin-top: 2rem;
 
     .product__name {
       margin-bottom: 1vh;
@@ -95,7 +95,7 @@ defineProps({
 
     .product__price-container {
       display: flex;
-      margin-top: 20px;
+      margin-top: 2rem;
 
       .product__current-price {
         font-weight: $font-medium;
@@ -116,7 +116,25 @@ defineProps({
     width: 205px;
     height: 65px;
     align-self: end;
-    margin: 10px 30px 20px 0;
+    margin: 1rem 3rem 2rem 0;
+  }
+}
+
+@media (max-width: $tablet) {
+  .product__card {
+    max-width: 40rem;
+
+    .product__photo {
+      max-width: 38rem;
+    }
+    .product__text-container {
+      margin-left: 2rem;
+      margin-top: 1rem;
+
+      .product__price-container {
+        margin-top: 1rem;
+      }
+    }
   }
 }
 </style>

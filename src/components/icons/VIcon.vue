@@ -1,9 +1,6 @@
 <template>
   <span
     v-html="icon"
-    :style="{ fill: color }"
-    role="img"
-    aria-hidden="true"
   ></span>
 </template>
 
@@ -16,17 +13,14 @@ export default {
   props: {
     id: {
       type: String,
-      required: true, // ID иконки обязателен
+      required: true,
     },
     color: {
       type: String,
-      default: 'currentColor',
     },
   },
   setup(props) {
-    // Находим SVG по ID
     const icon = computed(() => icons[props.id] || '');
-
     return {icon};
   },
 };

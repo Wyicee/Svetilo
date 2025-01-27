@@ -5,3 +5,7 @@ import MainContent from "@/components/mainContent-components/MainContent.vue";
 <template>
   <MainContent />
 </template>
+
+<style lang="scss">
+
+</style>

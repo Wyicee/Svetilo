@@ -144,7 +144,6 @@ import VIcon from "@/components/icons/VIcon.vue";
     display: flex;
     margin-top: 6rem;
     color: grey;
-    //padding: 0 0rem 0 47rem;
 
     .footer__copyright {
       margin-right: 4rem;
@@ -160,6 +159,95 @@ import VIcon from "@/components/icons/VIcon.vue";
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+}
+
+@media (max-width: $l-Laptop) {
+  .footer {
+    .footer__col-container {
+      grid-template-columns: 20rem 1fr 1fr 20rem;
+    }
+  }
+}
+
+@media (max-width: 1330px) {
+  .footer {
+    .footer__col-container {
+      grid-template-columns: 18rem 1.5fr 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: $s-Laptop) {
+  .footer {
+    .footer__col-container {
+      padding: 0;
+    }
+
+    .footer__bottom {
+      .footer__copyright {
+        margin-right: 2rem;
+      }
+
+      .footer__policy-link:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1065px) {
+  .footer {
+    .footer__bottom {
+      flex-direction: column;
+      grid-column: 2 / 3;
+
+      .footer__copyright {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+
+      .footer__policy-link:not(:last-child) {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .footer {
+    .footer__bottom {
+      min-width: 32rem;
+    }
+    .footer__col-container {
+      grid-template-columns: 15rem 1.5fr 1fr .5fr;
+    }
+  }
+}
+
+@media (max-width: 835px) {
+  .footer {
+    .footer__inner {
+      .footer__col-container {
+        grid-template-columns: 1.5fr 1fr .5fr;
+        .footer__logo {
+          display: none;
+        }
+      }
+      .footer__bottom {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .footer {
+    font-size: $font-size-small;
+    .footer__inner {
+      padding: 7rem 2rem 0;
     }
   }
 }

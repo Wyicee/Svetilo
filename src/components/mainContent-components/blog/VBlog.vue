@@ -31,7 +31,7 @@ defineProps({
   .blog__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 100px;
+    column-gap: 10rem;
 
     .blog__card:nth-child(odd) {
       justify-self: end;
@@ -39,6 +39,39 @@ defineProps({
 
     .blog__card:nth-child(even) {
       justify-self: start;
+    }
+  }
+}
+
+@media (max-width: $l-Laptop) {
+  .blog {
+    .blog__inner {
+      column-gap: 5rem;
+    }
+  }
+}
+
+@media (max-width: 1040px) {
+  .blog {
+    .blog__inner {
+      column-gap: 2rem;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .blog {
+    .blog__inner {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 2rem;
+
+      .blog__card:nth-child(odd) {
+        justify-self: center;
+      }
+
+      .blog__card:nth-child(even) {
+        justify-self: center;
+      }
     }
   }
 }

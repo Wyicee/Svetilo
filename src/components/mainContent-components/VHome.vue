@@ -30,7 +30,6 @@ defineProps({
       display: flex;
       padding: 2rem 1rem;
       border-radius: 4rem;
-
     }
   }
 }
@@ -39,6 +38,14 @@ defineProps({
   .home {
     .home__inner {
       padding: 4rem 1rem;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .home {
+    .home__inner {
+      padding: 4rem 0;
     }
   }
 }
