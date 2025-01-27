@@ -1,6 +1,6 @@
 <script setup>
 import VIcon from "@/components/icons/VIcon.vue";
-import VAsideModalWrapper from "@/components/mainContent-components/VAsideModalWrapper.vue";
+import VAsideModalWrapper from "@/components/mainContent-components/modal-window/VAsideModalWrapper.vue";
 
 import { ref } from "vue";
 
@@ -64,8 +64,8 @@ const openModal = () => {
         display: none;
         flex-direction: column;
         justify-content: space-between;
-        width: 30px;
-        height: 21px;
+        width: 4rem;
+        height: 3rem;
         cursor: pointer;
         border: none;
         background: none;
@@ -120,7 +120,7 @@ const openModal = () => {
   }
 }
 
-@media (max-width: $tablet) {
+@media (max-width: 565px) {
   .header {
     .header__inner {
       .header__menu {

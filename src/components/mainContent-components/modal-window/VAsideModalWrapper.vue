@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import VSideMenu from "@/components/mainContent-components/VSideMenu.vue";
+import VSideMenu from "@/components/mainContent-components/modal-window/VSideMenu.vue";
 
 const isOpen = ref(false);
 
