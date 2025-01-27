@@ -5,7 +5,7 @@ export const useProductStore = defineStore('productStore', {
         productList: [
             {
                 id: 1,
-                img: './src/assets/products-photos/product1.jpeg',
+                img: './assets/products-photos/product1.jpeg',
                 discount: 15,
                 name: 'Solar Vision',
                 description:
@@ -14,7 +14,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 2,
-                img: './src/assets/products-photos/product2.jpeg',
+                img: './assets/products-photos/product2.jpeg',
                 discount: 20,
                 name: 'Luna Glow',
                 description:
@@ -23,7 +23,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 3,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: null,
                 name: 'Bright Accent',
                 description:
@@ -32,7 +32,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 4,
-                img: './src/assets/products-photos/product4.jpeg',
+                img: './assets/products-photos/product4.jpeg',
                 discount: 10,
                 name: 'Aurora Glow',
                 description:
@@ -41,7 +41,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 5,
-                img: './src/assets/products-photos/product5.jpeg',
+                img: './assets/products-photos/product5.jpeg',
                 discount: 15,
                 name: 'EcoSphere',
                 description:
@@ -50,7 +50,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 6,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: null,
                 name: 'Inspire Beam',
                 description:
@@ -59,7 +59,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 7,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: null,
                 name: 'Zen Light',
                 description:
@@ -68,7 +68,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 8,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: 20,
                 name: 'TechnoRay',
                 description:
@@ -77,7 +77,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 9,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: null,
                 name: 'Crystal Halo',
                 description:
@@ -86,7 +86,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 10,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: null,
                 name: 'LumiFlex Pro',
                 description:
@@ -95,7 +95,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 11,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: null,
                 name: 'Green Glow',
                 description:
@@ -104,7 +104,7 @@ export const useProductStore = defineStore('productStore', {
             },
             {
                 id: 12,
-                img: './src/assets/products-photos/product3.jpeg',
+                img: './assets/products-photos/product3.jpeg',
                 discount: 5,
                 name: 'ArtLight',
                 description:
