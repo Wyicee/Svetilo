@@ -6,4 +6,4 @@ ROUTING
 1. product catalog works only
    
 INFO
-1. the adaptation is ready line 90%
+1. the adaptation is ready like 90%
