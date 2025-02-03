@@ -37,10 +37,10 @@ import VIcon from "@/components/icons/VIcon.vue";
         </div>
         <div class="footer__col_type-about footer__col">
           <router-link to="/" class="footer__link">Главная</router-link>
-          <a href="" class="footer__link">О нас</a>
+          <a href="#" class="footer__link">О нас</a>
           <router-link to="/catalog" class="footer__link">Каталог</router-link>
-          <a href="" class="footer__link">Отзвы</a>
-          <a href="" class="footer__link">Новости</a>
+          <a href="#" class="footer__link">Отзывы</a>
+          <a href="#" class="footer__link">Новости</a>
         </div>
         <div class="footer__bottom">
           <div class="footer__copyright">© 2024 Светило.</div>

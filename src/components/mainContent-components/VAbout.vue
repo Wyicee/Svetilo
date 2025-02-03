@@ -88,25 +88,18 @@ import VButton from "@/global_components/VButton.vue";
           column-gap: 2rem;
 
           .features__main-item {
-            height: 383px;
-            max-width: 385px;
-            border-radius: 2rem;
             grid-area: 1 / 1 / 3 / 2;
 
             img {
-              max-width: 385px;
+              max-width: 485px;
               border-radius: 2rem;
             }
           }
 
           .features__secondary-item {
-            height: 185px;
-            max-width: 285px;
-            border-radius: 2rem;
-
             img {
               max-width: 285px;
-              height: 185px;
+              height: 235px;
               border-radius: 2rem;
             }
 
