@@ -17,13 +17,13 @@ import VButton from "@/global_components/VButton.vue";
           </p>
           <div class="features__grid-items">
             <div class="features__main-item">
-              <img src="" alt="">
+              <img src="/public/assets/features-photo/features1.jpeg">
             </div>
             <div class="features__secondary-item">
-              <img src="" alt="">
+              <img src="/public/assets/features-photo/features2.jpeg">
             </div>
             <div class="features__secondary-item">
-              <img src="" alt="">
+              <img src="/public/assets/features-photo/features2.jpeg">
             </div>
           </div>
         </div>
@@ -88,18 +88,27 @@ import VButton from "@/global_components/VButton.vue";
           column-gap: 2rem;
 
           .features__main-item {
-            background-color: $additional-color;
             height: 383px;
             max-width: 385px;
             border-radius: 2rem;
             grid-area: 1 / 1 / 3 / 2;
+
+            img {
+              max-width: 385px;
+              border-radius: 2rem;
+            }
           }
 
           .features__secondary-item {
-            background-color: $additional-color;
             height: 185px;
             max-width: 285px;
             border-radius: 2rem;
+
+            img {
+              max-width: 285px;
+              height: 185px;
+              border-radius: 2rem;
+            }
 
             &:last-child {
               align-self: end;

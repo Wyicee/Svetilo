@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import {useBlogStore} from "@/stores/blogStore.js";
 
 export const useProductStore = defineStore('productStore', {
     state: () => ({

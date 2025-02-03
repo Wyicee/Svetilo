@@ -1,23 +1,23 @@
 <script setup>
 defineProps({
-  list: {
+  blogItem: {
     type: Array,
   },
 });
 </script>
 
 <template>
-<div class="blog__card" v-for="listItem in list" :key="listItem.id">
+<div class="blog__card">
   <div class="blog__photo">
-    <img :src="listItem.img" loading="lazy" class="blog__photo-img">
+    <img :src="blogItem.img" loading="lazy" class="blog__photo-img">
   </div>
     <div class="blog__card-content">
       <div class="blog__card-textWrapper">
         <div class="blog__date">
-          {{ listItem.date }}
+          {{ blogItem.date }}
         </div>
         <div class="blog__name">
-          {{ listItem.name }}
+          {{ blogItem.name }}
         </div>
       </div>
       <VButton class="blog__button" type="outline">

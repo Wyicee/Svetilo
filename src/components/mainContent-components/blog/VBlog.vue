@@ -1,11 +1,5 @@
 <script setup>
-import VBlogCard from "@/components/mainContent-components/blog/VBlogCard.vue";
-
-defineProps({
-  list: {
-    type: Array,
-  },
-});
+import VBlogSwiper from "@/components/mainContent-components/blog/VBlogSwiper.vue";
 </script>
 
 <template>
@@ -14,9 +8,7 @@ defineProps({
     Последние новости и статьи
   </div>
   <div class="blog__inner">
-    <VBlogCard
-      :list="list"
-    />
+    <VBlogSwiper/>
   </div>
 </div>
 </template>
@@ -30,7 +22,7 @@ defineProps({
 
   .blog__inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     column-gap: 10rem;
 
     .blog__card:nth-child(odd) {
