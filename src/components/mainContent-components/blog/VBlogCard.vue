@@ -9,7 +9,7 @@ defineProps({
 <template>
 <div class="blog__card">
   <div class="blog__photo">
-    <img :src="blogItem.img" loading="lazy" class="blog__photo-img">
+    <img :src="blogItem.img" loading="eager" class="blog__photo-img">
   </div>
     <div class="blog__card-content">
       <div class="blog__card-textWrapper">
